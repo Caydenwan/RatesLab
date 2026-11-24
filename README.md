@@ -43,14 +43,13 @@ data/synthetic_ois.csv    # artificial inputs (rates in decimal)
 tests/test_core.py        # 18 unit and numerical validation tests
 outputs/                 # machine-readable results; plots generated on run
 reports/research.md       # research methods, results and limitations
-reports/roadmap.md        # role alignment and next-stage gates
 pyproject.toml            # package and dependencies
 ```
 
 ## Conventions and limitations
 
-Spot-start, single-curve OIS, annual fixed leg, simplified year fractions, no holiday calendar, accrued interest, settlement/payment lags, daily fixings, CSA differences, credit/funding spreads, transaction costs or margin. The bond value is an illustrative present value at a coupon date, not an executable Treasury quote. Zero-node risk and rebootstrap quote risk are intentionally separate. The hedge is unconstrained least squares on zero-node DV01, not a tradable portfolio recommendation. No institution supplied proprietary pricing models, funding, or validation. No employer data is used.
+Spot-start, single-curve OIS, annual fixed leg, simplified year fractions, no holiday calendar, accrued interest, settlement/payment lags, daily fixings, CSA differences, credit/funding spreads, transaction costs or margin. The bond value is an illustrative present value at a coupon date, not an executable Treasury quote. Zero-node risk and rebootstrap quote risk are intentionally separate. The hedge is unconstrained least squares on zero-node DV01, not a tradable portfolio recommendation. All inputs are synthetic; no external model validation has been performed.
 
 Public data plan: NY Fed SOFR fixings and FRED Treasury constant-maturity series for context; a documented source of OIS par instruments is required for empirical OIS calibration. SOFR fixings and Treasury par yields are not substitutes for an OIS term structure. QuantLib date/convention benchmark, alternative interpolation, historical tests, Nelson-Siegel-Svensson and Hull-White calibration remain open research tasks.
 
-See [research report](reports/research.md) and [development roadmap](reports/roadmap.md).
+See [research report](reports/research.md).
