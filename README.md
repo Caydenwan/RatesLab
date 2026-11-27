@@ -2,6 +2,9 @@
 
 **Fixed Income Quantitative Research & Pricing Engine** | v0.1.0
 
+**[Open interactive research workbench](https://rateslab-workbench.vercel.app)** — browser-based controls, charts and Python calculations; no local installation required.
+
+
 Independent research project — prototype, not a production valuation or trading system.
 
 RatesLab investigates whether parallel-DV01 neutrality is sufficient to hedge curve-shape risk. It builds a simplified USD discount curve from synthetic deposit and OIS par quotes, prices a fixed-income book, measures both zero-node and market-quote sensitivities, and compares single-tenor and multi-tenor swap hedges under six deterministic shocks.
