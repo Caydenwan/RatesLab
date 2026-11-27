@@ -2,7 +2,14 @@
 
 **Fixed Income Quantitative Research & Pricing Engine** | v0.1.0
 
-**[Open interactive research workbench](https://rateslab-workbench.vercel.app)** — browser-based controls, charts and Python calculations; no local installation required.
+**[Open interactive research workbench](https://rateslab-workbench.vercel.app)** — browser-based controls, charts and calculations; no local installation required.
+### Interactive modes
+
+- **Bond Explorer (default):** instant, browser-native fixed-coupon bond pricing from face value, whole-year maturity, annual coupon and a nominal semiannual yield. Explore exact price changes under yield shocks, annual coupon income, Macaulay/modified duration, finite-difference DV01 and contractual cash flows. Assumes pricing on a coupon date, no call or default, and no accrued interest. This is a flat-yield educational calculator, not a yield-curve calibration.
+- **Portfolio Lab:** the existing Python deposit/OIS curve, exact portfolio repricing, zero-node risk and swap hedging engine, with guided scenario explanations, true maturity spacing, signed P&L bars, and before/after hedge comparisons. Illustrative quotes are explicitly identified; no Treasury yields are substituted for OIS quotes. First custom run loads Pyodide; initial results are the checked-in synthetic example.
+
+The interface uses blue for valuation, green/red for signed price changes, and amber for rate sensitivity. Both modes are browser-local, require no API key or paid service, and do not model transaction costs, margin, liquidity, tax or credit losses.
+
 
 
 Independent research project — prototype, not a production valuation or trading system.
